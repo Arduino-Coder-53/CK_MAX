@@ -15,12 +15,15 @@ There are 5 pins, VCC, GND, DIN, CLK, and CS in the display. VCC and GND are the
 NOTE: This function supports only one Module.
 
 > CK_MAX(uint16_t CS_pin, int Number_of_Given_device);
+
 Same as the previous one, but when you use more than one module then use this library. 
 
 > CK_MAX(uint16_t data_pin, uint16_t clock_pin, uint16_t CS_pin, int Number_of_Given_device);
+
 If you want to connect DIN, CLK, and CS as your choice then you should use this one. 
 
 > CK_MAX(uint16_t VCC, uint16_t GND, uint16_t DIN, uint16_t CS, uint16_t CLK, int Number_of_Given_Device);
+
 When you want to connect all of the pins of the module even the power pins mean VCC and GND as your own choice then this function should be your choice. 
 
 ## FUNCTIONS
