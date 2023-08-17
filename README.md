@@ -93,3 +93,5 @@ This function only works with MAKE_BUFFER animation. By default, you get 3 spins
 * RANDOMIZED
 
 
+## VIDEO (YOUTUBE)
+https://www.youtube.com/watch?v=prMTWiZlzSI&t=10s
