@@ -26,7 +26,7 @@ If you want to connect DIN, CLK, and CS as your choice then you should use this 
 
 When you want to connect all of the pins of the module even the power pins mean VCC and GND as your own choice then this function should be your choice. 
 
-## FUNCTIONS
+## FUNCTIONS (PRINTING)
 >  void begin();
 
 Begin your object.
@@ -46,5 +46,50 @@ A most important function for printing. examples, ShwoMe(2021), ShowMe(3.14), Sh
 > void ShowMe(int position, byte sprite);
 
 You can light up your customized digit.
+
+> void AutoRefresh(boolean ar);
+
+If you keep On the AutoRefresh() function using "AutoRefresh(1)", then your display automatically refreshed after new data comes. But keeping Off means "AutoRefresh(0)", your new data will be overlapped with your old data. suppose, you print ShowMe("Arduino"; then use ShowMe(123), you will see the display "123uino". 
+
+>  void RefreshMe();
+
+For washing out the display. 
+
+## FUNCTIONS (ANIMATING)
+
+> void AnimateMe(String message, All_Animations Animation, uint16_t duration, uint16_t wait);
+
+One-sided animation, sample, AmimateMe("Arduino", SCROLL_LEFT, 50, 1000); If you try this function then you can see the scrolling display with "Arduino" text, that comes from the Right side of the display and will go left side of it. The transition speed will be 50 milliseconds. and hold for 1 second (1000 milliseconds).
+
+> void AnimateMe(String message, All_Animations Animation, uint8_t number, uint16_t duration, uint16_t wait);
+
+Double-sided Animation, like intro and outro. sample AmimateMe("Arduino", MAKE, BREAK, 70, 50, 2000); MAKE - Intro Animation, BREAK - Outro Animation, 70 - Intro animation transition time in milliseconds, 50 - Outro animation transition time, 2000 - Pause time. 
+
+> void Set_Buffer_Count(uint8_t number);
+
+This function only works with MAKE_BUFFER animation. By default, you get 3 spins for buffering. But using this library you can change the number. 
+
+## ANIMATIONS NAME
+* SCROLL_LEFT
+* SCROLL_RIGHT
+* SCROLL_DOWN
+* SCROLL_UP
+* MAKE_BUFFER
+* SLICE_OWN
+* SLICE_ALL
+* SCAN_TOP
+* SCAN_BOTTOM
+* RAND_UP
+* RAND_DOWN
+* WAVE
+* MAKE
+* BREAK
+* SCROLL_UP_SINGLE
+* SCROLL_DOWN_SINGLE
+* SCROLL_UP_RANDOM
+* SCROLL_DONW_RANDOM
+* GROW_UP
+* GROW_DOWN
+* RANDOMIZED
 
 
