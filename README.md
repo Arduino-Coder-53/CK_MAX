@@ -27,3 +27,16 @@ If you want to connect DIN, CLK, and CS as your choice then you should use this 
 When you want to connect all of the pins of the module even the power pins mean VCC and GND as your own choice then this function should be your choice. 
 
 ## FUNCTIONS
+>  void begin();
+
+Begin your object.
+
+> void Set_Brightness(byte given_bright);
+
+Set the brightness of your display. 0 to 14 will be the range.
+
+> void Set_Position(byte pos);
+
+Set the position that you want to start the printing. 0 means the first digit, if use 1 digit then 7 will be the maximum value. But if you use "n" numbers of modules the maximum number will be (n*8-1).
+
+> 
