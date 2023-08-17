@@ -39,4 +39,12 @@ Set the brightness of your display. 0 to 14 will be the range.
 
 Set the position that you want to start the printing. 0 means the first digit, if use 1 digit then 7 will be the maximum value. But if you use "n" numbers of modules the maximum number will be (n*8-1).
 
-> 
+>  void ShowMe(character/String/Float/Integer);
+
+A most important function for printing. examples, ShwoMe(2021), ShowMe(3.14), ShowMe("Chandan"), ShowMe('C'). 
+
+> void ShowMe(int position, byte sprite);
+
+You can light up your customized digit.
+
+
